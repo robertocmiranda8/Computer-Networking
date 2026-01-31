@@ -1,7 +1,7 @@
 ### welcome_assignment_answers
 ### Input - All nine questions given in the assignment.
 ### Output - The right answer for the specific question.
-
+import hashlib
 def welcome_assignment_answers(question):
     #Students do not have to follow the skeleton for this assignment.
     #Another way to implement is using a "case" statements similar to C.
@@ -9,6 +9,20 @@ def welcome_assignment_answers(question):
         answer = "No"
     elif question == "Is it possible to decrypt a message without a key? - Yes/No":
         answer = "No"
+    elif question == "Is it possible to decode a message without a key? - Yes/No":
+        answer = "Yes"
+    elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
+        answer = "No"
+    elif question == "What is the SHA256 hashing value of your NYU email and use the answer in your code - ":
+        email = "rm7694@nyu.edu"
+        hash = hashlib.sha256(email.encode()).hexdigest()
+        return hash
+    elif question == "Is MD5 a secured hashing algorithm? - Yes/No":
+        answer = "No"
+    elif question == "What layer of the TCP/IP model does the protocol DNS belong to? - The answer should be an integer number":
+        answer = 5
+    elif question == "What layer of the TCP/IP model does the protocol ICMP belong to? - The answer should be an integer number":
+        ansswer = 3
 
     else: 
         ### you should understand why this else case should be included
@@ -31,6 +45,6 @@ if __name__ == "__main__":
 #"Is it possible to decode a message without a key? - Yes/No": "No"
 #"Is a hashed message supposed to be un-hashed? - Yes/No": "No"
 #"What is the SHA256 hashing value of your NYU email and use the answer in your code - ":
-#"Is MD5 a secured hashing algorithm? - Yes/No": "Yes"
+#"Is MD5 a secured hashing algorithm? - Yes/No": "No"
 #"What layer of the TCP/IP model does the protocol DNS belong to? - The answer should be an integer number": 7
 #"What layer of the TCP/IP model does the protocol ICMP belong to? - The answer should be an integer number": 4
